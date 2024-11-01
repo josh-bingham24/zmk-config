@@ -14,6 +14,11 @@
 #define media 3
 #define game 4
 
+&lt {
+        tapping-term-ms = <200>;
+        quick-tap-ms = <200>;
+};
+
 / {
         behaviors {
                 td0: tap_dance_0 {
@@ -94,11 +99,6 @@
                         , <&macro_release &kp LCTRL>
                         ;
                 };
-        };
-
-        &lt {
-                tapping-term-ms = <200>;
-                quick-tap-ms = <200>;
         };
 
         keymap {
