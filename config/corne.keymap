@@ -104,7 +104,7 @@
         keymap {
                 compatible = "zmk,keymap";
 
-                colemak-dh {
+                colemak_dh {
 // -----------------------------------------------------------------------------------------
 // | ESC  |  Q  |  W  |  F  |  P  |  B  |   |  J  |  L   |  U  |  Y  |  ;  | BSPC |
 // | TAB  |  A  |  R  |  S  |  T  |  G  |   |  M  |  N   |  E  |  I  |  O  |  '   |
