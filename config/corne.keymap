@@ -8,7 +8,7 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
-#define colemak-dh 0
+#define colemak_dh 0
 #define symbols 1
 #define nav 2
 #define media 3
@@ -106,14 +106,14 @@
 
                 colemak_dh {
 // -----------------------------------------------------------------------------------------
-// | ESC  |  Q  |  W  |  F  |  P  |  B  |   |  J  |  L   |  U  |  Y  |  ;  | BSPC |
-// | TAB  |  A  |  R  |  S  |  T  |  G  |   |  M  |  N   |  E  |  I  |  O  |  '   |
-// | SHFT |  Z  |  X  |  C  |  d  |  v  |   |  k  |  h   |  ,  |  .  |  /  | SHFT |
-//                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
+// | ESC  |  Q  |  W  |  F  |  P  |  B  |   |  J  |  L  |  U  |  Y  |  ;  | BSPC |
+// | TAB  |  A  |  R  |  S  |  T  |  G  |   |  M  |  N  |  E  |  I  |  O  |  '   |
+// | SHFT |  Z  |  X  |  C  |  d  |  v  |   |  k  |  h  |  ,  |  .  |  /  | SHFT |
+//                    | GUI | LWR | ENT |   | SPC | DEL | ALT |
                         bindings = <
    &kp ESC  &kp Q           &kp W           &kp F            &kp P            &kp B   &kp J &kp L             &kp U            &kp Y           &kp SEMI        &kp BSPC
    &kp TAB  &lh_pht LGUI A  &lh_pht LALT R  &lh_pht LCTRL S  &lh_pht LSHFT T  &kp G   &kp M &rh_pht RSHIFT N  &rh_pht RCTRL E  &rh_pht RALT I  &rh_pht RGUI O  &kp SQT
-   &td0  &kp Z           &kp X           &kp C            &kp D            &kp V   &kp K &kp H             &kp COMMA        &kp DOT         &kp FSLH        &kp RSHIFT
+   &td0     &kp Z           &kp X           &kp C            &kp D            &kp V   &kp K &kp H             &kp COMMA        &kp DOT         &kp FSLH        &kp RSHIFT
                                                      &kp LGUI &mo 1 &lt symbols RET   &lt nav SPACE &kp DEL &kp RALT
                         >;
                 };
@@ -121,9 +121,9 @@
                 symbols {
 // -----------------------------------------------------------------------------------------
 // | ESC  |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BSPC |
-// | TAB  | BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT |  4  |  5  |  6  |     |      |
-// | SHFT |     |     |     |     |     |   |     |  1  |  2  |  3  |     |      |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
+// | TAB  |  <  |  {  |  [  |  (  |  /  |   | "|" |  4  |  5  |  6  |  -  |   '  |
+// | SHFT |  >  |  }  |  ]  |  )  |  \  |   |  ~  |  1  |  2  |  3  |  =  |   `  |
+//                    |     |     |     |   | SPC |     |     |
                         bindings = <
    &trans    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &trans
    &trans &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4     &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
@@ -134,10 +134,10 @@
 
                 nav {
 // -----------------------------------------------------------------------------------------
-// |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BSPC |
-// | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-// | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
+// | ESC  | F1  | F2  | F3  | F4  |     |   | PGU | HME | UP  | END | DEL | BSPC |
+// | TAB  | F5  | F6  | F7  | F8  |     |   | PGD | LFT | DWN | RT  | INS |      |
+// | SHFT | F9  | F10 | F11 | F12 |     |   | RED | UND | CUT | CPY | PST |      |
+//                    |     |     | ENT |   |     |     |     |
                         bindings = <
    &kp  TAB  &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp ASTRK &kp LPAR &kp RPAR &kp BSPC
    &kp LCTRL &trans   &trans &trans   &trans   &trans      &kp MINUS &kp EQUAL &kp LBKT  &kp RBKT &kp BSLH &kp GRAVE
