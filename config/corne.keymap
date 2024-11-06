@@ -28,6 +28,14 @@
                         bindings = <&kp LSHIFT>, <&kp CAPS>;
                 };
 
+                gt0: game_tap {
+                        compatible = "zmk,behavior-hold-tap";
+                        #binding-cells = <0>;
+                        flavor = "tap-unless-interrupted";
+                        tapping-term-ms = <350>;
+                        bindings = <&kp ESC>, <&tog game>;
+                };
+
                 lh_pht: left_positional_hold_tap {
                         compatible = "zmk,behavior-hold-tap";
                         #binding-cells = <2>;
@@ -109,12 +117,12 @@
 // | ESC  |  Q  |  W  |  F  |  P  |  B  |   |  J  |  L  |  U  |  Y  |  ;  | BSPC |
 // | TAB  |  A  |  R  |  S  |  T  |  G  |   |  M  |  N  |  E  |  I  |  O  |  '   |
 // | SHFT |  Z  |  X  |  C  |  d  |  v  |   |  k  |  h  |  ,  |  .  |  /  | SHFT |
-//                |     | nav | ENT/num |   | SPC/sym | med |     |
+//                | ESC/gme | TAB/nav | ENT/num |   | SPC/sym | BSPC/med | DEL |
                         bindings = <
    &kp ESC  &kp Q           &kp W           &kp F            &kp P            &kp B   &kp J &kp L             &kp U            &kp Y           &kp SEMI        &kp BSPC
    &kp TAB  &lh_pht LGUI A  &lh_pht LALT R  &lh_pht LCTRL S  &lh_pht LSHFT T  &kp G   &kp M &rh_pht RSHIFT N  &rh_pht RCTRL E  &rh_pht RALT I  &rh_pht RGUI O  &kp SQT
    &td0     &kp Z           &kp X           &kp C            &kp D            &kp V   &kp K &kp H             &kp COMMA        &kp DOT         &kp FSLH        &kp RSHIFT
-                                                     &kp LGUI &mo nav &lt numbers RET   &lt symbols SPACE &kp BSPC &kp DEL
+                                                       &gt0 &lt nav TAB &lt num RET   &lt sym SPACE &lt med BSPC &kp DEL
                         >;
                 };
 
