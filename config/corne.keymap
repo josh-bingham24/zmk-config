@@ -10,7 +10,7 @@
 #define function 5
 #define game 6
 #define game2 7
-#define none 8
+#define none_layer 8
 
 &lt {
         tapping-term-ms = <200>;
