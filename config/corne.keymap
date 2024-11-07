@@ -118,7 +118,7 @@
    &kp ESC  &kp Q           &kp W           &kp F            &kp P            &kp B   &kp J &kp L             &kp U            &kp Y           &kp SEMI        &kp BSPC
    &kp TAB  &lh_pht LGUI A  &lh_pht LALT R  &lh_pht LCTRL S  &lh_pht LSHFT T  &kp G   &kp M &rh_pht RSHIFT N  &rh_pht RCTRL E  &rh_pht RALT I  &rh_pht RGUI O  &kp SQT
    &td0     &kp Z           &kp X           &kp C            &kp D            &kp V   &kp K &kp H             &kp COMMA        &kp DOT         &kp FSLH        &kp RSHIFT
-                                                    &kp ESC &lt nav TAB &lt num RET   &lt sym SPACE &lt media BSPC &lt function DEL
+                                                        &kp ESC &lt 3 TAB &lt 1 RET   &lt 2 SPACE &lt 4 BSPC &lt 5 DEL
                         >;
                 };
 
@@ -132,7 +132,7 @@
    &trans    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &trans
    &trans  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4     &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
    &trans  &trans       &trans       &trans       &trans       &trans         &trans   &trans   &trans &trans    &trans &trans
-                                    &none     &none       &trans      &kp SPACE  &trans   &kp RALT
+                                    &none     &none       &none      &kp SPACE  &trans   &kp RALT
                         >;
                 };
 
@@ -187,7 +187,7 @@
                         bindings = <
    &trans    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &trans
    &trans &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4     &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
-   &trans  &trans       &trans       &trans       &trans       &trans         &trans   &trans   &trans &trans    &trans &tog game
+   &trans  &trans       &trans       &trans       &trans       &trans         &trans   &trans   &trans &trans    &trans &tog 6
                                     &kp LGUI     &trans       &none      &kp SPACE  &trans   &kp RALT
                         >;
                 };
@@ -201,7 +201,7 @@
                         bindings = <
    &kp ESC   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
    &kp TAB   &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
-   &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &tog game
+   &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &tog 6
                   &kp LGUI &mo 1 &kp SPACE   &kp RET &mo 2 &kp RALT
                         >;
                 };
@@ -210,12 +210,12 @@
 // -----------------------------------------------------------------------------------------
 // |      |  6  |  7  |  8  |  9  |  0  |   |     |     |     |     |     |      |
 // |      |  1  |  2  |  3  |  4  |  5  |   |     |     |     |     |     |      |
-// |      |     |     |     |     |     |   |     |     |     |     |     | game |
+// |      |     |     |     |     |     |   |     |     |     |     |     |      |
 //                    |     |     | ___ |   |     |     |     |
                         bindings = <
    &none  &kp N6 &kp N7 &kp N8 &kp N9 &kp N0     &none &none &none &none &none &none
    &none  &kp N1 &kp N2 &kp N3 &kp N4 &kp N5     &none &none &none &none &none &none
-   &none  &none  &none  &none  &none  &none      &none &none &none &none &none &tog game
+   &none  &none  &none  &none  &none  &none      &none &none &none &none &none &none
                            &none &none &none     &none &none &none
                         >;
                 };
