@@ -160,15 +160,15 @@
 
                 media {
 // -----------------------------------------------------------------------------------------
-// |      |     |     |     |     |     |   |     |     |     |     |     |      |
-// |      |     |     |     |     |     |   |     | SHF | CTL | ALT | GUI |      |
-// |      |     |     |     |     |     |   |     |     |     |     |     |      |
+// |      |     | PRV | P/P | NXT |     |   |     |     |     |     |     |      |
+// |      |     | MTE | VLD | VLU |     |   |     | SHF | CTL | ALT | GUI |      |
+// |      |     | RWD |     | FSF |     |   |     |     |     |     |     |      |
 //                    |     |     |     |   |     | ___ |     |
                         bindings = <
-   &none &none &none &none &none &none   &none &none &none &none &none &none
-   &none &none &none &none &none &none   &none &none &none &none &none &none
-   &none &none &none &none &none &none   &none &none &none &none &none &none
-                     &none &none &none   &none &none &none
+   &none &none &kp C_PREV &kp C_PP     &kp C_NEXT   &none   &none &none      &none     &none    &none    &none
+   &none &none &kp C_MUTE &kp C_VOL_DN &kp C_VOL_UP &none   &none &kp RSHIFT &kp RCTRL &kp RALT &kp RGUI &none
+   &none &none &kp C_RW   &none        &kp C_FF     &none   &none &none      &none     &none    &none    &none
+                          &none        &none        &none   &none &none      &none
                         >;
                 };
 
