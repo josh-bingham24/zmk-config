@@ -10,7 +10,7 @@
 #define function 5
 #define game 6
 #define game2 7
-#define none_layer 8
+#define innactive 8
 
 &lt {
         tapping-term-ms = <200>;
@@ -109,24 +109,24 @@
 // | SHFT |  Z  |  X  |  C  |  d  |  v  |   |  k  |  h  |  ,  |  .  |  /  | SHFT |
 //            | ESC | TAB/nav | ENT/num |   | SPC/sym | BSPC/med | DEL/fun |
                         bindings = <
-   &kp ESC  &kp Q           &kp W           &kp F            &kp P            &kp B   &kp J &kp L             &kp U            &kp Y           &kp SEMI        &kp BSPC
-   &kp TAB  &lh_pht LGUI A  &lh_pht LALT R  &lh_pht LCTRL S  &lh_pht LSHFT T  &kp G   &kp M &rh_pht RSHIFT N  &rh_pht RCTRL E  &rh_pht RALT I  &rh_pht RGUI O  &kp SQT
-   &td0     &kp Z           &kp X           &kp C            &kp D            &kp V   &kp K &kp H             &kp COMMA        &kp DOT         &kp FSLH        &kp RSHIFT
-                                                        &kp ESC &lt 3 TAB &lt 1 RET   &lt 2 SPACE &lt 4 BSPC &lt 5 DEL
+   &kp ESC  &kp Q           &kp W           &kp F            &kp P            &kp B       &kp J &kp L             &kp U            &kp Y           &kp SEMI        &kp BSPC
+   &kp TAB  &lh_pht LGUI A  &lh_pht LALT R  &lh_pht LCTRL S  &lh_pht LSHFT T  &kp G       &kp M &rh_pht RSHIFT N  &rh_pht RCTRL E  &rh_pht RALT I  &rh_pht RGUI O  &kp SQT
+   &td0     &kp Z           &kp X           &kp C            &kp D            &kp V       &kp K &kp H             &kp COMMA        &kp DOT         &kp FSLH        &kp RSHIFT
+                                            &kp ESC          &lt 3 TAB        &lt 1 RET   &lt 2 SPACE             &lt 4 BSPC       &lt 5 DEL
                         >;
                 };
 
                 num {
 // -----------------------------------------------------------------------------------------
 // |      |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BSPC |
-// |      |  /  |  *  |  -  |  +  |  =  |   |     |  4  |  5  |  6  |  .  |      |
+// |      |  +  |  -  |  *  |  /  |  =  |   |     |  4  |  5  |  6  |  .  |      |
 // |      |     |     |     |     |     |   |     |  1  |  2  |  3  |  ,  |      |
-//                    |     |     | ___ |   | SPC |     |     |
+//                    |     |     | ___ |   | SPC | BSCP | DEL |
                         bindings = <
-   &none    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &trans
-   &trans  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4     &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
-   &trans  &trans       &trans       &trans       &trans       &trans         &trans   &trans   &trans &trans    &trans &trans
-                                    &none &none &trans      &kp SPACE &trans &kp RALT
+   &none  &kp N1   &kp N2    &kp N3   &kp N4   &kp N5       &kp N6    &kp N7   &kp N8 &kp N9 &kp N0  &trans
+   &none  &kp PLUS &kp MINUS &kp STAR &kp FSLH &kp EQUAL    &none     &kp N4   &kp N5 &kp N6 &DOT    &none
+   &none  &none    &none     &none    &none    &none        &none     &kp N1   &kp N2 &kp N3 &COMMA  &none
+                             &none    &none    &none        &kp SPACE &kp BSCP &kp DEL
                         >;
                 };
 
@@ -137,10 +137,10 @@
 // |      |     |     |     |     |     |   |     |     |  <  |  >  |  -  |  =   |
 //                    |     |     | ENT |   | ___ |     |     |
                         bindings = <
-   &none    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &trans
-   &trans &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4     &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
-   &trans  &trans       &trans       &trans       &trans       &trans         &trans   &trans   &trans &trans    &trans &trans
-                                    &kp LGUI     &trans       &none      &kp SPACE  &trans   &kp RALT
+   &none  &none &none &none &none &none     &none &none &none &none &none &none
+   &none  &none &none &none &none &none     &none &none &none &none &none &none
+   &none  &none &none &none &none &none     &none &none &none &none &none &none
+                      &none &none &none     &none &none &none
                         >;
                 };
 
@@ -149,40 +149,40 @@
 // | ESC  | F1  | F2  | F3  | F4  |     |   | PGU | HME | UP  | END | DEL | BSPC |
 // | TAB  | F5  | F6  | F7  | F8  |     |   | PGD | LFT | DWN | RT  | INS |      |
 // | SHFT | F9  | F10 | F11 | F12 |     |   | RED | UND | CUT | CPY | PST |      |
-//                    |     | ___ | ENT |   | SPC |     |     |
+//                    |     | ___ |     |   | SPC | BSCP | DEL |
                         bindings = <
-   &trans    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &trans
-   &trans &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4     &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
-   &trans  &trans       &trans       &trans       &trans       &trans         &trans   &trans   &trans &trans    &trans &none
-                                    &kp LGUI     &trans       &none      &kp SPACE  &trans   &kp RALT
+   &none  &none &none &none &none &none     &none &none &none &none &none &none
+   &none  &none &none &none &none &none     &none &none &none &none &none &none
+   &none  &none &none &none &none &none     &none &none &none &none &none &none
+                      &none &none &none     &none &none &none
                         >;
                 };
 
                 media {
 // -----------------------------------------------------------------------------------------
-// |  ESC |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BSPC |
-// | TAB  |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
-// | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
-//                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
+// |      |     |     |     |     |     |   |     |     |     |     |     |      |
+// |      |     |     |     |     |     |   |     |     |     |     |     |      |
+// |      |     |     |     |     |     |   |     |     |     |     |     |      |
+//                    |     |     |     |   |     |     |     |
                         bindings = <
-   &kp ESC   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
-   &kp TAB   &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
-   &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp ESC
-                  &kp LGUI &mo 1 &kp SPACE   &kp RET &mo 2 &kp RALT
+   &none  &none &none &none &none &none     &none &none &none &none &none &none
+   &none  &none &none &none &none &none     &none &none &none &none &none &none
+   &none  &none &none &none &none &none     &none &none &none &none &none &none
+                      &none &none &none     &none &none &none
                         >;
                 };
 
                 function {
 // -----------------------------------------------------------------------------------------
-// |      | F1  | F2  | F3  | F4  |     |   |     |     |     |     |     |      |
-// |      | F5  | F6  | F7  | F8  |     |   |     | SHF | CTL | ALT | GUI |      |
-// |      | F9  | F10 | F11 | F12 |     |   |     |     |     |     |     | game |
-//                    |     |     |     |   |     |     | ___ |
+// |      |     |     |     |     |     |   |     |     |     |     |     |      |
+// |      |     |     |     |     |     |   |     |     |     |     |     |      |
+// |      |     |     |     |     |     |   |     |     |     |     |     |      |
+//                    |     |     |     |   |     |     |     |
                         bindings = <
-   &trans    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &trans
-   &trans &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4     &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
-   &trans  &trans       &trans       &trans       &trans       &trans         &trans   &trans   &trans &trans    &trans &tog 6
-                                    &kp LGUI     &trans       &none      &kp SPACE  &trans   &kp RALT
+   &none  &none &none &none &none &none     &none &none &none &none &none &none
+   &none  &none &none &none &none &none     &none &none &none &none &none &none
+   &none  &none &none &none &none &none     &none &none &none &none &none &none
+                      &none &none &none     &none &none &none
                         >;
                 };
 
@@ -214,7 +214,12 @@
                         >;
                 };
 
-                none_layer {
+                innactive {
+// -----------------------------------------------------------------------------------------
+// |      |     |     |     |     |     |   |     |     |     |     |     |      |
+// |      |     |     |     |     |     |   |     |     |     |     |     |      |
+// |      |     |     |     |     |     |   |     |     |     |     |     |      |
+//                    |     |     |     |   |     |     |     |
                         bindings = <
    &none  &none &none &none &none &none     &none &none &none &none &none &none
    &none  &none &none &none &none &none     &none &none &none &none &none &none
