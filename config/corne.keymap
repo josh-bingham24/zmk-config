@@ -151,10 +151,10 @@
 // |      |     |     |     |     |     |   | RED | UND | CUT | CPY | PST |      |
 //                    |     | ___ |     |   | SPC | BSCP | DEL |
                         bindings = <
-   &none &none &none &none &none &none   &none &none &none &none &none &none
-   &none &none &none &none &none &none   &none &none &none &none &none &none
-   &none &none &none &none &none &none   &none &none &none &none &none &none
-                     &none &none &none   &none &none &none
+   &none &none    &none    &none     &none     &none   &kp PG_UP &kp HOME &kp UP   &kp END   &kp DEL &kp BSPC
+   &none &kp LGUI &kp LALT &kp LCTRL &kp LSHFT &none   &kp PG_DN &kp LEFT &kp DOWN &kp RIGHT &kp INS &none
+   &none &none    &none    &none     &none     &none   &redo     &undo    &cut     &copy     &paste  &none
+                           &none     &none     &none   &kp SPACE &kp BSPC &kp DEL
                         >;
                 };
 
