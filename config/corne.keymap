@@ -146,9 +146,9 @@
 
                 nav {
 // -----------------------------------------------------------------------------------------
-// | ESC  | F1  | F2  | F3  | F4  |     |   | PGU | HME | UP  | END | DEL | BSPC |
-// | TAB  | F5  | F6  | F7  | F8  |     |   | PGD | LFT | DWN | RT  | INS |      |
-// | SHFT | F9  | F10 | F11 | F12 |     |   | RED | UND | CUT | CPY | PST |      |
+// |      |     |     |     |     |     |   | PGU | HME | UP  | END | DEL | BSPC |
+// |      |     |     |     |     |     |   | PGD | LFT | DWN | RT  | INS |      |
+// |      |     |     |     |     |     |   | RED | UND | CUT | CPY | PST |      |
 //                    |     | ___ |     |   | SPC | BSCP | DEL |
                         bindings = <
    &none  &none &none &none &none &none     &none &none &none &none &none &none
@@ -163,21 +163,21 @@
 // |      |     |     |     |     |     |   |     |     |     |     |     |      |
 // |      |     |     |     |     |     |   |     |     |     |     |     |      |
 // |      |     |     |     |     |     |   |     |     |     |     |     |      |
-//                    |     |     |     |   |     |     |     |
+//                    |     |     |     |   |     | ___ |     |
                         bindings = <
-   &none  &none &none &none &none &none     &none &none &none &none &none &none
-   &none  &none &none &none &none &none     &none &none &none &none &none &none
-   &none  &none &none &none &none &none     &none &none &none &none &none &none
+   &none  &none &none &none &none &none     &none &none &none &none &none  &none
+   &none  &none &none &none &none &none     &none &none &none &none &none  &none
+   &none  &none &none &none &none &none     &none &none &none &none &none  &none
                       &none &none &none     &none &none &none
                         >;
                 };
 
                 function {
 // -----------------------------------------------------------------------------------------
-// |      |     |     |     |     |     |   |     |     |     |     |     |      |
-// |      |     |     |     |     |     |   |     |     |     |     |     |      |
-// |      |     |     |     |     |     |   |     |     |     |     |     |      |
-//                    |     |     |     |   |     |     |     |
+// |      | F1  | F2  | F3  | F4  | PRT |   |     |     |     |     |     |      |
+// |      | F5  | F6  | F7  | F8  |     |   |     |     |     |     |     |      |
+// |      | F9  | F10 | F11 | F12 |     |   |     |     |     |     |     |      |
+//                    |     |     |     |   |     |     | ___ |
                         bindings = <
    &none  &none &none &none &none &none     &none &none &none &none &none &none
    &none  &none &none &none &none &none     &none &none &none &none &none &none
@@ -191,12 +191,12 @@
 // | ESC  |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BSPC |
 // | TAB  |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
 // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | game |
-//                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
+//               | CTL | CPS/gme2 | SPC |   | ENT | RSE  | ALT |
                         bindings = <
    &kp ESC   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
    &kp TAB   &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
    &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &tog 6
-                  &kp LGUI &mo 1 &kp SPACE   &kp RET &mo 2 &kp RALT
+                  &kp LGUI &lt 7 CAPS &kp SPACE   &kp RET &mo 2 &kp RALT
                         >;
                 };
 
