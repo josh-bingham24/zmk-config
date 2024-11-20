@@ -108,6 +108,7 @@
 // | TAB  |  A  |  R  |  S  |  T  |  G  |   |  M  |  N  |  E  |  I  |  O  |  '   |
 // | SHFT |  Z  |  X  |  C  |  d  |  v  |   |  k  |  h  |  ,  |  .  |  /  | SHFT |
 //            | ESC | TAB/nav | ENT/num |   | SPC/sym | BSPC/med | DEL/fun |
+                        display-name = "colemak";
                         bindings = <
    &kp ESC &kp Q        &kp W        &kp F         &kp P          &kp B       &kp J       &kp L          &kp U         &kp Y        &kp SEMI     &kp BSPC
    &kp TAB &lhrm LGUI A &lhrm LALT R &lhrm LCTRL S &lhrm LSHFT T  &kp G       &kp M       &rhrm RSHIFT N &rhrm RCTRL E &rhrm RALT I &rhrm RGUI O &kp SQT
@@ -122,6 +123,7 @@
 // |      |  +  |  -  |  *  |  /  |  =  |   |     |  4  |  5  |  6  |  .  |      |
 // |      |     |     |     |     |     |   |     |  1  |  2  |  3  |  ,  |      |
 //                    |     |     | ___ |   | SPC | BSCP | DEL |
+                        display-name = "num";
                         bindings = <
    &none &kp N1   &kp N2    &kp N3   &kp N4   &kp N5      &kp N6    &kp N7   &kp N8 &kp N9 &kp N0    &trans
    &none &kp PLUS &kp MINUS &kp STAR &kp FSLH &kp EQUAL   &none     &kp N4   &kp N5 &kp N6 &kp DOT   &none
@@ -136,6 +138,7 @@
 // |  ~   | "|" |  {  |  [  |  (  |  /  |   |  \  |  )  |  ]  |  }  |  _  |  +   |
 // |      |     |     |     |     |     |   |     |     |  <  |  >  |  -  |  =   |
 //                    |     |     |     |   | ___ |     |     |
+                        display-name = "sym";
                         bindings = <
    &kp GRAVE &kp EXCL &kp AT   &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS &kp STAR &kp LPAR &kp RPAR  &trans
    &kp TILDE &kp PIPE &kp LBRC &kp LBKT &kp LPAR &kp FSLH    &kp BSLH  &kp RPAR &kp RBKT &kp RBRC &kp UNDER &kp PLUS
@@ -150,6 +153,7 @@
 // |      | GUI | ALT | CTL | SHF |     |   | PGD | LFT | DWN | RT  | INS |      |
 // |      |     |     |     |     |     |   | RED | UND | CUT | CPY | PST |      |
 //                    |     | ___ |     |   | SPC | BSCP | DEL |
+                        display-name = "nav";
                         bindings = <
    &none &none    &none    &none     &none     &none   &kp PG_UP &kp HOME &kp UP   &kp END   &kp DEL &kp BSPC
    &none &kp LGUI &kp LALT &kp LCTRL &kp LSHFT &none   &kp PG_DN &kp LEFT &kp DOWN &kp RIGHT &kp INS &none
@@ -164,6 +168,7 @@
 // |      |     | MTE | VLD | VLU |     |   |     | SHF | CTL | ALT | GUI |      |
 // |      |     | RWD |     | FSF |     |   | btc | bt1 | bt2 | bt3 | bt4 | bt5  |
 //                    |     |     |     |   |     | ___ |     |
+                        display-name = "media";
                         bindings = <
    &none &none &kp C_PREV &kp C_PP     &kp C_NEXT   &none   &none      &none        &none        &none        &none        &none
    &none &none &kp C_MUTE &kp C_VOL_DN &kp C_VOL_UP &none   &none      &kp RSHIFT   &kp RCTRL    &kp RALT     &kp RGUI     &none
@@ -176,12 +181,13 @@
 // -----------------------------------------------------------------------------------------
 // |      | F1  | F2  | F3  | F4  | PRT |   |     |     |     |     |     |      |
 // |      | F5  | F6  | F7  | F8  |     |   |     | SHF | CTL | ALT | GUI |      |
-// |      | F9  | F10 | F11 | F12 |     |   |     |     |     |     |     |      |
+// |      | F9  | F10 | F11 | F12 |     |   |     |     |     |     |     | game |
 //                    |     |     |     |   |     |     | ___ |
+                        display-name = "func";
                         bindings = <
    &none &kp F1 &kp F2  &kp F3  &kp F4  &kp PSCRN   &none &none      &none     &none    &none    &none
    &none &kp F5 &kp F6  &kp F7  &kp F8  &none       &none &kp RSHIFT &kp RCTRL &kp RALT &kp RGUI &none
-   &none &kp F9 &kp F10 &kp F11 &kp F12 &none       &none &none      &none     &none    &none    &none
+   &none &kp F9 &kp F10 &kp F11 &kp F12 &none       &none &none      &none     &none    &none    &tog 6
                         &none   &none   &none       &none &none      &none
                         >;
                 };
@@ -192,6 +198,7 @@
 // | TAB  |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
 // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | game |
 //               | CTL | CPS/gme2 | SPC |   | ENT | RSE  | ALT |
+                        display-name = "game";
                         bindings = <
    &kp ESC   &kp Q &kp W &kp E     &kp R      &kp T       &kp Y   &kp U  &kp I     &kp O   &kp P    &kp BSPC
    &kp TAB   &kp A &kp S &kp D     &kp F      &kp G       &kp H   &kp J  &kp K     &kp L   &kp SEMI &kp SQT
@@ -206,25 +213,12 @@
 // |      |  6  |  7  |  8  |  9  |  0  |   |     |     |     |     |     |      |
 // |      |     |     |     |     |     |   |     |     |     |     |     |      |
 //                    |     |     | ___ |   |     |     |     |
+                        display-name = "game2";
                         bindings = <
    &none &kp N1 &kp N2 &kp N3 &kp N4 &kp N5   &none &none &none &none &none &none
    &none &kp N6 &kp N7 &kp N8 &kp N9 &kp N0   &none &none &none &none &none &none
    &none &none  &none  &none  &none  &none    &none &none &none &none &none &none
                        &none  &none  &none    &none &none &none
-                        >;
-                };
-
-                innactive {
-// -----------------------------------------------------------------------------------------
-// |      |     |     |     |     |     |   |     |     |     |     |     |      |
-// |      |     |     |     |     |     |   |     |     |     |     |     |      |
-// |      |     |     |     |     |     |   |     |     |     |     |     |      |
-//                    |     |     |     |   |     |     |     |
-                        bindings = <
-   &none &none &none &none &none &none   &none &none &none &none &none &none
-   &none &none &none &none &none &none   &none &none &none &none &none &none
-   &none &none &none &none &none &none   &none &none &none &none &none &none
-                     &none &none &none   &none &none &none
                         >;
                 };
         };
