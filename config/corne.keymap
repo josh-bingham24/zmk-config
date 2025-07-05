@@ -115,7 +115,7 @@
 //                    | Gui | Rse | Ent |   | Spc | Lwr | Alt |
                         display-name = "colemak";
                         bindings = <
-   &kp TAB   &kp Q &kp W &kp F    &kp P &kp B     &kp J     &kp L &kp U     &kp Y   &kp SEMI &kp BSCP
+   &kp TAB   &kp Q &kp W &kp F    &kp P &kp B     &kp J     &kp L &kp U     &kp Y   &kp SEMI &kp BSPC
    &kp LCTRL &kp A &kp R &kp S    &kp T &kp G     &kp M     &kp N &kp E     &kp I   &kp O    &kp SQT
    &mt0      &kp Z &kp X &kp C    &kp D &kp V     &kp K     &kp H &kp COMMA &kp DOT &kp FSLH &td0
                          &kp LGUI &mo 1 &kp RET   &kp SPACE &mo 2 &kp RALT
