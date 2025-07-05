@@ -27,7 +27,7 @@
                 mt0: mod_tap_esc {
                         compatible = "zmk,behavior-hold-tap";
                         #binding-cells = <0>;
-                        flavor: "hold-preferred";
+                        flavor = "hold-preferred";
                         bindings = <&kp LSHIFT>, <&kp ESC>;
                 };
 
